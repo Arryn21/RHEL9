@@ -1,0 +1,50 @@
+Multiple ways can do installation of an Operating System:
+-	Bootable Pendrive
+-	CD
+-	Internet/Network
+
+Virtualization:  	
+Virtualization is a process of creating virtual or logical resources from physical resources. It enables the efficient utilization of hardware resources by abstracting them and allowing multiple virtual instances to run on a single physical machine.
+At the core of virtualization technology is the hypervisor, also known as a virtual machine monitor (VMM). The hypervisor is a software or firmware layer that enables the creation and management of virtual machines (VMs). It acts as an intermediary between the physical hardware and the virtual instances running on it.
+
+The most condition is your motherboard should support virtualization.
+To check that:
+Win+R > msinfo32 > Check if hyper-v / virtualization is enabled
+
+Hypervisor
+
+TYPE 1 Hypervisor (Bare Metal Hypervisor):
+A Type 1 hypervisor, also known as a bare metal hypervisor, runs directly on the physical hardware of a host machine. It provides virtualization capabilities without relying on a separate operating system. Here are some key characteristics of Type 1 hypervisors:
+1. Direct hardware access: Type 1 hypervisors have direct access to the underlying hardware resources, allowing them to efficiently manage and allocate resources to virtual machines (VMs).
+2. Enhanced performance: Since Type 1 hypervisors run directly on the hardware, they typically offer better performance compared to Type 2 hypervisors, as there is no additional layer of an operating system between the hypervisor and the hardware.
+3. Higher scalability: Type 1 hypervisors are designed for enterprise-level virtualization and can handle large-scale deployments with numerous VMs running concurrently.
+4. Examples: Popular Type 1 hypervisor include VMware ESXi, Microsoft Hyper-V, Citrix XenServer, and KVM (Kernel-based Virtual Machine).
+TYPE 2 Hypervisor (Hosted Hypervisor):
+A Type 2 hypervisor, also known as a hosted hypervisor, runs as a software layer on top of an existing operating system. It requires an underlying operating system to provide hardware access and manage resources. Here are some key characteristics of Type 2 hypervisors:
+1. Operating system dependency: Type 2 hypervisors rely on an underlying operating system for hardware access and resource management. They are installed as applications within the host operating system.
+2. Easy installation and setup: Type 2 hypervisors are typically easier to install and set up compared to Type 1 hypervisors since they utilize an existing operating system.
+3. Simplicity and flexibility: Type 2 hypervisors are often used for personal or small-scale virtualization needs. They offer the flexibility to run multiple guest operating systems on top of the host operating system.
+4. Examples: Common Type 2 hypervisors include Oracle VirtualBox, VMware Workstation, VMware Fusion (for macOS), and Microsoft Virtual PC.
+Overall, Type 1 hypervisors are generally more suitable for enterprise-level virtualization, high-performance workloads, and server consolidation, while Type 2 hypervisors are often used for personal virtualization, development environments, and testing purposes due to their ease of use and flexibility.
+
+Installation:
+-	Create an Account on Red Hat
+-	Download VMware: https://www.vmware.com/in/products/workstation-pro/workstation-pro-evaluation.html
+-	Download Linux image: https://developers.redhat.com/products/rhel/download
+-	To Install VMware will require a Licence KEY. You can get it for free on Google.
+-	Setup Linux on VM with recommended settings
+
+System Registration:
+It could be done at 3 places. 
+1. While installing steps.
+  In one of the windows when you select a user name, root name, and disk selection at that time you also have the option to add your Redhat account.
+2. While setting up the account.
+3. From the terminal. remember, you should have root access for the following commands
+#subscription-manager register
+#username (redhat)
+#password
+#subscription-manager attach
+
+Alternative. (I think this may work. Testing is not done.)
+#subscription-manager register –username <username> --password <password> --autoattach
+
