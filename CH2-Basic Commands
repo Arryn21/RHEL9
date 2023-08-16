@@ -1,0 +1,66 @@
+A command line is a text-based interface that is used to input instructions to a computer system. The Linux command line is provided by a program called the shell. Many shell program variants have been developed over the years. Every user can use a different shell, but Red Hat recommends using the default shell for system administration.
+The default user shell in Red Hat Enterprise Linux (RHEL) is the GNU Bourne-Again Shell (bash). The bash shell is an improved version of the original Bourne Shell (sh) found on UNIX systems.
+The shell displays a string when it is waiting for user input, called the shell prompt. When a regular user starts a shell, the prompt includes a dollar ($) character at the end:
+[user@host ~]$
+A hash (#) character replaces the dollar ($) character when the shell is running as the superuser, root. This character indicates that it is a superuser shell, which helps to avoid mistakes that can affect the entire system.
+[root@host ~]#
+
+Navigation commands:
+1. `cd ..`: Moves back to the parent directory.
+2. `cd ~`: Takes you to the home directory.
+3. `cd ../..`: Moves back two directories.
+4. `cd`: Changes the current directory. You can use `cd` followed by the directory name to navigate to a specific directory.
+5. `cd -`: Moves back to previous working directory
+
+File and directory manipulation commands:
+1. `mkdir`: Creates a directory (folder).
+2. `mkdir -p`: Creates multiple directories in a single command. The `-p` flag allows creating parent directories if they don't exist.
+3. `touch`: Creates a new file.
+4. `cat > (path)/(filename)`: Creates a file and allows you to write content into it. Press `Ctrl + D` to save and exit.
+5. `rm -rf *`: Deletes everything in the current directory, including files and directories.
+6. `rmdir`: Removes an empty directory. It will only work if the directory is empty.
+7. `cp`: Copies files or directories. Use the command followed by the source file/directory and the destination location.
+8. `mv`: Moves or renames files or directories. Use the command followed by the source and destination locations.
+
+Listing and displaying commands:
+1. `ls`: Lists the files and directories in the current directory.
+2. `ls -l /ll`: List files and directories in the `/ll` directory in a long format.
+3. `ls -R`: Lists files and directories recursively, displaying subdirectory contents as well.
+4. `ll`: Shows a long listing format, providing detailed information about files and directories.
+5. `ls /home`: List files and directories in the `/home` directory.
+6. `lsblk`: Lists the block devices or hard drives attached to the system.
+
+Text editing and viewing commands:
+1. `cat`: Displays the contents of a file on the terminal.
+2. `cat file1 file2`: Display the contents of multiple files (`file1` and `file2`).
+3. `vim`: A text editor used to create and modify files.
+4. `vi`: Opens the Vim text editor to insert or edit content. Press `i` to enter insert mode, then `Esc`, `:wq`, and `!` to save and exit.
+5. To make the file encrypted: esc > :X > give password > esc > :wq! (save and exit). Now the cat command will show encrypted output.
+6. To decrypt the file: esc > :X > dont enter any password, just press enter > save and exit
+
+Date and time commands:
+1. `date`: Show the current date and time.
+2. `date +%r`: Show the current time in 12-hour format.
+3. `date +%R`: Show the current time in 24-hour format.
+4. `date +%D`: Show the current date in MM/DD/YY format.
+5. `date +%A`: Show the current day of the week.
+6. `cal 2024`: Display the calendar for the year 2024.
+
+Other commands:
+1. `echo`: Prints a message or writes content directly into files using redirection (`>`).
+2. `uname -a`: Displays system information, including the operating system properties.
+3. `cat /etc/os-release`: Shows the information about the operating system flavor or distribution being used.
+4. `which`: Display the path to an executable command.
+5. `history`: Displays the history of previously executed commands.
+6. `whoami`: Prints the username of the currently logged-in user.
+7. `--help`: Provides help and usage information for a specific command.
+8. `find` :finds any file or directory inside mentioned directory and its subdirectories
+9. `locate` : more powerfull tha  find command coz it locates the file/directory using the database
+10. updatedb : to update the database
+
+File Management:
+In a computer system, there are different types of files that can be managed. These include:
+1. Ordinary Files: These are files that contain data, text, or program instructions. They are the most common type of files and are used for storing various types of information.
+2. Special Files: These files provide access to hardware devices such as hard drives, CD-ROM drives, modems, Ethernet adapters, and other peripherals. They allow the operating system and applications to communicate with and control these devices.
+3. Directories: Directories are used to organize and store files. They can contain both ordinary files and special files. Directories provide a hierarchical structure for organizing files into different levels and subdirectories. They help in organizing and managing files in a logical manner, making it easier to locate and access specific files when needed.
+By effectively managing files and directories, users can keep their data organized, easily find and access files, and ensure efficient storage and retrieval of information on a computer system.
